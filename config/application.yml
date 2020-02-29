@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: ${APPLICATION_NAME:boilerplate}
+server:
+    address: ${HOST:localhost}
+    port: ${PORT:8080}
