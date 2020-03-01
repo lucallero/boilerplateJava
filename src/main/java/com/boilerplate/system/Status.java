@@ -8,16 +8,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Info {
+public class Status {
 
-    private Logger log = LoggerFactory.getLogger(Info.class);
+    private Logger log = LoggerFactory.getLogger(Status.class);
 
     @Value("${spring.application.name}")
     private String name;
 
     @RequestMapping("/info")
     public String info() {
-        log.trace("A TRACE Message from " + name);
+        log.info("A INFO Message from " + name);
+        return name;
+    }
+
+    @RequestMapping("/health")
+    public String health() {
+        log.trace("I'm good. A TRACE Message from " + name);
         return name;
     }
 }
