@@ -1,6 +1,10 @@
 spring:
     application:
         name: ${APPLICATION_NAME:boilerplate}
+    http:
+        converters:
+            preferred-json-mapper: gson
+
 server:
     address: ${HOST:localhost}
     port: ${PORT:8080}
