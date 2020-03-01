@@ -1,6 +1,6 @@
 # A boilerplate project for Springboot
 
-A boilerplate project for Springboot Java application.  Initially built with spring command line utility.  
+A boilerplate project for Spring Boot Java applications.  Initially built with spring command line utility.  
 
 ## Tooling versions
 
