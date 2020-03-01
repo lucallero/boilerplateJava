@@ -1,4 +1,4 @@
-# A boilerplate project for Springboot
+# A boilerplate project for Spring Boot.
 
 A boilerplate project for Spring Boot Java applications.  Initially built with spring command line utility.  
 
