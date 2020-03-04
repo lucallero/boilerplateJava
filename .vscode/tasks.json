@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "gradle continuous build",
+            "type": "shell",
+            "command": "gradle bootJar --continuous",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "gradle bootRun debug",
+            "type": "shell",
+            "command": "gradle bootRun --debug-jvm",
+            "group": "none"
+        }
+    ]
+}

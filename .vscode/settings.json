@@ -1,0 +1,15 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.checkstyle.version": "8.29",
+    "window.title": "BOILERPLATE : ${activeEditorShort}",
+    "files.exclude": {
+        ".project": true,
+        "**/.vscode": false,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.serverless": true,
+        "**/.gradle": true,
+        "**/bin": true
+    }
+}
