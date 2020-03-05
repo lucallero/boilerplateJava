@@ -1,0 +1,10 @@
+version: '3'
+services:
+  boilerplate:
+    build: .
+    ports:
+    - "8080:8081"
+    environment:
+      APPLICATION_NAME: 'Spring Boot boilerplate'
+      HOST: 0.0.0.0
+      PORT: 8081    
