@@ -6,8 +6,10 @@ public class Payment {
 
     String id;
     double amount;
+    String currency;
     String source;
     String destination;
+    String description;
 
     Payment(Payment p) {
         id = UUID.randomUUID().toString();
@@ -16,11 +18,13 @@ public class Payment {
         destination = p.destination;
     }
 
-    Payment(double a, String s, String d) {
+    Payment(double aAmount, String aCurrency, String aSource, String aDestination, String aDescription) {
         id = UUID.randomUUID().toString();
-        amount = a;
-        source = s;
-        destination = d;
+        amount = aAmount;
+        currency = aCurrency;
+        source = aSource;
+        destination = aDestination;
+        description = aDestination;
     }
 
     @Override

@@ -1,9 +1,10 @@
 spring:
     application:
         name: ${APPLICATION_NAME:boilerplate}
-    http:
+    mvc:
         converters:
-            preferred-json-mapper: gson
+            preferred-json-mapper: gson            
+
 
 server:
     address: ${HOST:localhost}

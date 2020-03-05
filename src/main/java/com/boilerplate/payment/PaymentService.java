@@ -10,8 +10,8 @@ public class PaymentService {
 
     static HashMap<String, Payment> paymentsMap = new HashMap<>();
     static {
-        Payment p1 = new Payment(2.35, "Alice", "Bob");
-        Payment p2 = new Payment(3.45, "Bob", "Alice");
+        Payment p1 = new Payment(2.35, "EUR", "Alice", "Bob", "Coffe break");
+        Payment p2 = new Payment(3.45, "EUR", "Bob", "Alice", "Lottery");
         paymentsMap.put(p1.id, p1);
         paymentsMap.put(p2.id, p2);
     }
