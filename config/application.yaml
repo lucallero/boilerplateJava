@@ -4,8 +4,6 @@ spring:
     mvc:
         converters:
             preferred-json-mapper: gson            
-
-
 server:
-    address: ${HOST:localhost}
+    address: ${HOST:0.0.0.0}
     port: ${PORT:8080}
