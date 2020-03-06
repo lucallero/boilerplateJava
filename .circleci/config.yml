@@ -25,7 +25,7 @@ jobs:
 
       - run: 
           name: Gradle build
-          command:
+          command: |
             mkdir -p /tmp/libs            
             gradle clean build
             cp ./libs/boilerplate-0.1.0-SNAPSHOT.jar /tmp/libs
