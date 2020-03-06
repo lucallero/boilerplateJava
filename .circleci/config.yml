@@ -19,16 +19,16 @@ jobs:
 
       - run: gradle dependencies
 
-      - run: 
+      - run:
           name: Unit tests
           command: gradle test
 
       - run: 
           name: Gradle build
-          command: |
-            mkdir -p /tmp/libs            
-            gradle clean build
-            cp ./libs/boilerplate-0.1.0-SNAPSHOT.jar /tmp/libs
+          command: gradle clean build
+            # mkdir -p /tmp/libs            
+            # gradle clean build
+            # cp ./libs/boilerplate-0.1.0-SNAPSHOT.jar /tmp/libs
   build_docker:
     docker:
       - image: docker:19.03.5
