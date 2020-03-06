@@ -42,6 +42,12 @@ jobs:
           cp /tmp/libs/boilerplate-0.1.0-SNAPSHOT.jar ./libs/
           docker build . -t boilerplate
           
+workflows:
+  version: 2
+  product_reviews:
+    jobs:
+    - build_java
+    - build_docker
 
 
 
