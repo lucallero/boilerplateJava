@@ -1,11 +1,12 @@
 # Java Gradle CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
+#
 version: 2
 jobs:  
-  build:
+  build_java:
     docker:
-      - image: circleci/openjdk:11-jdk
+      - image: gradle:jdk11
 
     working_directory: ~/repo
 
@@ -24,8 +25,32 @@ jobs:
 
       - run: 
           name: Gradle build
-          command: gradle clean build            
-            
-      - run:
-          name: Docker build          
-          command: docker build . -t boilerplate
+          command:
+            mkdir -p /tmp/libs            
+            gradle clean build
+            cp ./libs/boilerplate-0.1.0-SNAPSHOT.jar /tmp/libs
+  build_docker:
+    docker:
+      - image: docker:19.03.5
+
+    steps:
+    - checkout
+
+    - run:
+        name: Docker build
+        command:
+          cp /tmp/libs/boilerplate-0.1.0-SNAPSHOT.jar ./libs/
+          docker build . -t boilerplate
+          
+workflows:
+  version: 2
+  boilerplate:
+    jobs:
+    - build_java
+    - build_docker:
+          requires:
+              - build_java
+
+
+
+
