@@ -6,7 +6,7 @@ A boilerplate project for Spring Boot Java applications.  Initially built with s
 
 This image won't provide any functionality, it's only a demo project.
 
-If yet you want to run it's possible, just `docker run -p 8080:8080 lucallero/boilerplate`.
+If yet you want to run it's possible, just `docker run -p 8080:8080 lcallero/boilerplate-java`.
 
 
 ## Tooling versions
@@ -21,26 +21,25 @@ OpenJDK 64-Bit Server VM Corretto-11.0.4.11.1 (build 11.0.4+11-LTS, mixed mode)
 
 ### Spring
 ```
-λ spring --version
+spring --version
 Spring CLI v2.3.0.BUILD-SNAPSHOT
 ```
 
 ### Gradle
 ```
-λ gradle --version
-
+ gradle -version
 ------------------------------------------------------------
-Gradle 5.6.3
+Gradle 6.2.2
 ------------------------------------------------------------
 
-Build time:   2019-10-18 00:28:36 UTC
-Revision:     bd168bbf5d152c479186a897f2cea494b7875d13
+Build time:   2020-03-04 08:49:31 UTC
+Revision:     7d0bf6dcb46c143bcc3b7a0fa40a8e5ca28e5856
 
-Kotlin:       1.3.41
-Groovy:       2.5.4
-Ant:          Apache Ant(TM) version 1.9.14 compiled on March 12 2019
-JVM:          11.0.4 (Amazon.com Inc. 11.0.4+11-LTS)
-OS:           Windows 10 10.0 amd64
+Kotlin:       1.3.61
+Groovy:       2.5.8
+Ant:          Apache Ant(TM) version 1.10.7 compiled on September 1 2019
+JVM:          11.0.6 (Ubuntu 11.0.6+10-post-Ubuntu-1ubuntu118.04.1)
+OS:           Linux 4.15.0-88-generic amd64
 ```
 
 ### Reference Documentation
