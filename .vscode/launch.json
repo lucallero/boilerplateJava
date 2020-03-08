@@ -6,9 +6,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Debug (Attach) - Remote",
+            "name": "Debug attach",
             "request": "attach",
-            "hostName": "linuxserver",
+            "hostName": "localhost",
             "port": 5005
         },
         {

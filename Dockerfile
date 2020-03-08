@@ -1,9 +1,12 @@
 FROM  gradle:jdk11
 
-ARG VERSION=NO_VERSION_INFORMED_DURING_BUILD
+ARG SOURCE_BRANCH=NO_BRANCH_INFORMED_DURING_BUILD
+ARG SOURCE_COMMIT=NO_COMMIT
 
 RUN mkdir -p /app/build
 WORKDIR /app/build
+
+RUN echo "${SOURCE_BRANCH}-${SOURCE_COMMIT}" | tee build.version
 
 COPY config ./config
 COPY src ./src
