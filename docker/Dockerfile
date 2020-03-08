@@ -6,9 +6,9 @@ ARG SOURCE_COMMIT=NO_COMMIT
 RUN mkdir -p /app/build
 WORKDIR /app/build
 
-COPY config ./config
-COPY src ./src
-COPY *.gradle ./
+COPY api/config ./config
+COPY api/src ./src
+COPY api/*.gradle ./
 
 RUN gradle test && gradle build 
 RUN cp ./build/libs/boilerplate.jar .. 
