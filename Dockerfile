@@ -1,12 +1,19 @@
-FROM openjdk:11
+FROM  gradle:jdk11
 
-RUN mkdir boilerplate 
+ARG VERSION=NO_VERSION_INFORMED_DURING_BUILD
 
-WORKDIR /boilerplate
+RUN mkdir -p /app/build
+WORKDIR /app/build
 
-COPY config .
-COPY build/libs/boilerplate-0.1.0-SNAPSHOT.jar .
+COPY config ./config
+COPY src ./src
+COPY *.gradle ./
 
-RUN ls -l
+RUN gradle test && gradle build 
+RUN cp ./build/libs/boilerplate.jar .. 
 
-CMD ["java", "-jar", "boilerplate-0.1.0-SNAPSHOT.jar"]
+WORKDIR /app
+
+RUN rm -rf ./build
+
+CMD ["java", "-jar", "boilerplate.jar"]

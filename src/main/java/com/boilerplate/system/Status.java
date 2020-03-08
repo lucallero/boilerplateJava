@@ -12,7 +12,7 @@ public class Status {
 
     private Logger log = LoggerFactory.getLogger(Status.class);
 
-    @Value("${spring.application.name}")
+    // @Value("${spring.application.name}")
     private String name;
 
     @RequestMapping("/info")
