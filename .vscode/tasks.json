@@ -6,7 +6,7 @@
         {
             "label": "gradle continuous build",
             "type": "shell",
-            "command": "gradle bootJar --continuous",
+            "command": "gradle bootJar",
             "group": {
                 "kind": "build",
                 "isDefault": true

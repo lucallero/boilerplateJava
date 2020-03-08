@@ -2,6 +2,13 @@
 
 A boilerplate project for Spring Boot Java applications.  Initially built with spring command line utility.  
 
+## How to use this image?
+
+This image won't provide any functionality, it's only a demo project.
+
+If yet you want to run it's possible, just `docker run -p 8080:8080 lucallero/boilerplate`.
+
+
 ## Tooling versions
 
 ### Java

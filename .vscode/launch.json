@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Debug (Attach) - Remote",
             "request": "attach",
-            "hostName": "localhost",
+            "hostName": "linuxserver",
             "port": 5005
         },
         {
