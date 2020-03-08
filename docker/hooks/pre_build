@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "Dockerfile: $DOCKERFILE_PATH"
-echo "Image: $IMAGE_NAME"
